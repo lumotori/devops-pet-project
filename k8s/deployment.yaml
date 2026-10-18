@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-pet-project
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devops-pet-project
+  template:
+    metadata:
+      labels:
+        app: devops-pet-project
+    spec:
+      containers:
+        - name: api
+          image: devops-pet-project:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000
