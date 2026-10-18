@@ -1,0 +1,11 @@
+.git
+.github
+.pytest_cache
+__pycache__
+*.py[cod]
+.venv
+venv
+tests
+README.md
+k8s
+helm
